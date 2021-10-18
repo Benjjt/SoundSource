@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Set-up an artist profile in less than 60 seconds!"
+    />
+    <meta property="og:title" content="SoundSource..." />
+    <meta property="og:description" content="SoundSource..." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -12,7 +20,397 @@
     />
     <link rel="stylesheet" href="CSS/normalize.css" />
     <link rel="stylesheet" href="CSS/styles.css" />
-    <title>Ben Thorne's Portfolio</title>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>SoundSource - Music streaming at it's best</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="nav collapsible">
+        <a class="nav__brand" href="/"
+          ><img src="Images/Nav_Logo-small.svg" alt="My Logo"
+        /></a>
+        <svg class="icon icon--white nav__toggler">
+          <use xlink:href="images/sprite.svg#menu"></use>
+        </svg>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#">Premium</a></li>
+          <li class="nav__item"><a href="#">Support</a></li>
+          <li class="nav__item"><a href="#">Download</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="block block--dark block--skewed-left hero">
+      <div class="container grid grid--1x2">
+        <header class="block__header hero__content" data-aos="fade-right">
+          <h1 class="block__heading">Making music happen.</h1>
+          <p class="hero__tagline">
+            Millions of songs and podcasts, at your fingertips.
+          </p>
+          <a href="" class="btn btn--accent btn--stretched">Sign-up</a>
+        </header>
+        <picture >
+           <source
+            type="image/webp"
+            srcset="images/BannerGraphic.webp 1x, images/BannerGraphicX2.webp 2x"
+          />
+          <source
+            type="image/png"
+            srcset="images/BannerGraphic.png 1x, images/BannerGraphicX2.png 2x"
+          />
+        <img
+          class="hero__image"
+          src="images/BannerGraphicX2.png"
+          alt=""
+          data-aos="fade-left"
+        />
+      </div>
+    </section>
+    <section class="block container block-domain" data-aos="fade-up">
+      <header class="block__header">
+        <h2>Discover More</h2>
+        <p>
+          Our advanced algorithm creates you daily playlists based on the music
+          you already know and love.
+        </p>
+      </header>
+      <div class="input-group">
+        <input
+          type="text"
+          class="input"
+          placeholder="Hip-Hop, John Mayer, Loyal Carner, Smooth Jazz..."
+        />
+        <button class="btn btn--accent">
+          <svg class="icon icon--white">
+            <use xlink:href="images/sprite.svg#search"></use>
+          </svg>
+          Search
+        </button>
+      </div>
+      <ul class="list block-domain__prices">
+        <li><span class="badge badge--secondary">Radio</span></li>
+        <li>Podcasts</li>
+        <li>New Releases</li>
+      </ul>
+    </section>
+    <section class="block container block-plans" data-aos="fade-up">
+      <div class="grid grid--1x3">
+        <div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">Individual</h3>
+              <span class="plan__price">£5.99</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--secondary badge--small"
+                >1 month free</span
+              >
+              <span class="plan__description"></span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">
+                  Ad-free music listening for an uninterupted experience.
+                </li>
+                <li class="list__item">
+                  Play anywhere - even offline so the music never stops.
+                </li>
+                <li class="list__item">
+                  Ad-free music listening, play offine, on-demand playback
+                </li>
+              </ul>
+              <button class="btn btn--block btn--outline">Get Started</button>
+            </div>
+          </div>
+        </div>
+        <div class="plan plan--popular">
+          <div class="card card--primary">
+            <header class="card__header">
+              <h3 class="plan__name">Duo</h3>
+              <span class="plan__price">£7.99</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--primary badge--small"
+                >1 month free</span
+              >
+              <span class="plan__description"></span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">
+                  2 Delux accounts for a couple under one roof
+                </li>
+                <li class="list__item">
+                  Duo Mix: a playlist for two with music you both enjoy
+                </li>
+                <li class="list__item">
+                  Ad-free music listening, play offine, on-demand playback
+                </li>
+              </ul>
+              <button class="btn btn--block btn--outline">Get Started</button>
+            </div>
+          </div>
+        </div>
+        <div class="plan">
+          <div class="card card--secondary">
+            <header class="card__header">
+              <h3 class="plan__name">Family</h3>
+              <span class="plan__price">£9.99</span>
+              <span class="plan__billing-cycle">/month</span>
+              <span class="badge badge--secondary badge--small"
+                >1 month free</span
+              >
+              <span class="plan__description"></span>
+            </header>
+            <div class="card__body">
+              <ul class="list list--tick">
+                <li class="list__item">
+                  5 Delux accounts for a family living under one roof
+                </li>
+                <li class="list__item">
+                  Family Mix: a playlist for your family.
+                </li>
+                <li class="list__item">
+                  Ad-free music listening, play offline, on-demand playback
+                </li>
+              </ul>
+              <button class="btn btn--block btn--outline">Get Started</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="block container">
+      <header class="block__header">
+        <h2>New Music. New Technology.</h2>
+        <p>
+          With over 100,000 new tracks uploaded to our system each and every
+          day, only the <strong>best </strong>technlogy will cut-it!
+        </p>
+      </header>
+      <article class="grid grid--1x2 feature">
+        <div class="feature__content" data-aos="zoom-in-left">
+          <h3 class="feature__heading">Algotech Music Profile</h3>
+          <p class="feature__body">
+            Our one of a kind algothrithm tailors each person's listening
+            experience to produce the most engaging experience possible. By
+            tracking user engagement, liked and disliked tracks, and overall
+            listening time, our powerfull software gives you more of what you
+            love.
+          </p>
+          <a href="#" class="link-arrow">Learn More</a>
+        </div>
+        <img
+          class="feature__image"
+          src="images/AlgoTechLogoFinal.png"
+          alt=""
+          data-aos="fade-right"
+        />
+      </article>
+      <article class="grid grid--1x2 feature">
+        <img
+          class="feature__image"
+          src="images/ArtistSupport.png"
+          alt=""
+          data-aos="fade-right"
+        />
+        <div class="feature__content" data-aos="zoom-in-right">
+          <h3 class="feature__heading">Artist Support</h3>
+          <p>
+            SoundSource is nothing without it's tallented artists contributing
+            each and everyday to our platform. Without them we are nothing. In
+            this spirit, our ambition has always been to provide fair royalties
+            to artists per stream. We are proud to say that
+            <em>no other platform pays muscians more than we do.</em>em>
+          </p>
+          <a href="#" class="link-arrow">Learn More</a>
+        </div>
+      </article>
+    </section>
+    <section class="block block--dark block--skewed-right block-showcase">
+      <header class="block__header">
+        <h2>Full Artist Control</h2>
+        <div class="class container grid grid--1x2">
+          <picture class="block-showcase__image">
+            <source
+              type="image/webp"
+              srcset="
+                images/UserControlSoundSource.webp   1x,
+                images/UserControlSoundSource2X.webp 2x
+              "
+            />
+            <source
+              type="image/png"
+              srcset="
+                images/UserControlSoundSource.png   1x,
+                images/UserControlSoundSource2X.png 2x
+              "
+            />
+            <img
+              src="images/UserControlSoundSource.png"
+              alt=""
+              data-aos="fade-right"
+            />
+          </picture>
+          <ul class="list">
+            <li>
+              <div class="media">
+                <div class="media__image">
+                  <svg class="icon icon--primary">
+                    <use xlink:href="images/sprite.svg#growth"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title">Full Listener Statistics</h3>
+                  <p>
+                    Our state of the art back-end system ensures that artists
+                    know exactly how to reach thier target audience. Will full
+                    visablity across all social media platforms, it is now
+                    easier than ever for an artist to manage thier outreach.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <div class="media__image">
+                  <svg class="icon icon--primary">
+                    <use xlink:href="images/sprite.svg#clock"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title">Time Sensitive User Support</h3>
+                  <p>
+                    Our software updates are designed to ensure the smallest
+                    amount of down-time possible. With 24hr live chat support
+                    and a dedicated, highly skill tech team out users are always
+                    given the support and guidance they need.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="media">
+                <div class="media__image">
+                  <svg class="icon icon--primary">
+                    <use xlink:href="images/sprite.svg#settings"></use>
+                  </svg>
+                </div>
+                <div class="media__body">
+                  <h3 class="media__title">Easy Start & Managed Updates</h3>
+                  <p>
+                    It is now faster than ever to create a profile and upload
+                    your music to our platform. Unlike other streaming services,
+                    signing-up up is a simplistic and seemless process.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </section>
+    <section class="block">
+      <header class="block__header">
+        <h2>Our Artists</h2>
+        <p>Established in 2021, SoundSource contiues to grow month on month.</p>
+        <div class="container">
+          <div class="card testimonial">
+            <div class="grid grid--1x2">
+              <div class="testimonial__image">
+                <img
+                  class="testimonial__image"
+                  src="./Images/MusiciansCol.webp"
+                  alt="A happy customer!"
+                />
+              </div>
+              <blockquote class="quote">
+                <p class="quote__text">
+                  It is my continued commitment, as the founder and CEO of
+                  SoundSource, to offer the highest quality streaming service on
+                  the market. It is my belief that by supporting artist's
+                  growth, we can not only increase an artist's following but
+                  also cultivate long-lasting relationships within the industry.
+                  By unlocking the true potential of musicians across the globe
+                  and always prioritising thier wellfair, streaming can truely
+                  provide the finicial support that it always should have done.
+                </p>
+                <div>
+                  <div class="media">
+                    <div class="media__image">
+                      <svg class="icon icon--primary quote__line">
+                        <use xlink:href="images/sprite.svg#line"></use>
+                      </svg>
+                    </div>
+                    <div class="media__body">
+                      <h3 class="media__title quote__author">
+                        Benjamin Thorne
+                      </h3>
+                      <p class="quote__organisation">CEO of SoundSource</p>
+                    </div>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </header>
+    </section>
+    <footer class="block block--dark footer">
+      <div class="container grid footer__sections">
+        <section class="collapsible collapsible--expanded footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Communities</h2>
+            <svg class="icon icon--small collapsible__chevron">
+              <use xlink:href="images/new-chevron.svg#new-chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">For Artists</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">Advertising</a></li>
+              <li><a href="#">Investors</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Company</h2>
+            <svg class="icon icon--small collapsible__chevron">
+              <use xlink:href="images/new-chevron.svg#new-chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">About</a></li>
+              <li><a href="#">SoundSource Careers</a></li>
+            </ul>
+          </div>
+        </section>
+        <section class="collapsible footer__section">
+          <div class="collapsible__header">
+            <h2 class="collapsible__heading footer__heading">Useful Links</h2>
+
+            <svg class="icon icon--white icon--small collapsible__chevron">
+              <use xlink:href="images/new-chevron.svg#new-chevron"></use>
+            </svg>
+          </div>
+          <div class="collapsible__content">
+            <ul class="list">
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Free Mobile App</a></li>
+              <li><a href="#">Web Player</a></li>
+            </ul>
+          </div>
+        </section>
+        <div class="footer__brand">
+          <img src="images/Nav_Logo-small.svg" alt="" />
+          <p class="footer__copyright">Copyright 2021 Benjamin Thorne</p>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
 </html>
